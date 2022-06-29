@@ -1,0 +1,31 @@
+- Class info
+-- Main class
+    - Create Scanner (pass to UI)
+    - Create Movie class (pass to UI)
+
+-- User UI class
+    - Receive Scanner
+    - Receive Movie class
+    - start() method
+        - add()
+        - remove()
+        - sort()
+        - edit() should be able to edit/update all attributes
+        - save() saves to a file that can be read later
+        - ? (calls menu)
+        - quit
+        - print all
+        - print a selection (for movie picker app or others)
+        - last watch (updates last time I watched it)
+
+-- Movie class
+    - Title
+    - Director
+    - Year released
+    - Do I own
+    - Physical or digital media
+    - Have I watched
+
+
+
+- Functionality
