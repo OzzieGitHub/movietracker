@@ -19,11 +19,11 @@
         - last watch (updates last time I watched it)
 
 -- Movie class
-    - Title
-    - Director
-    - Year released
-    - Do I own
-    - Physical or digital media
+    //- Title
+    //- Director
+    //- Year released
+    //- Do I own
+    //- Physical or digital media
     - Have I watched
 
 
