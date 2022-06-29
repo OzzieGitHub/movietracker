@@ -24,7 +24,7 @@
     //- Year released
     //- Do I own
     //- Physical or digital media
-    - Have I watched
+    //- Have I watched
 
 
 
