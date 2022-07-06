@@ -40,5 +40,8 @@ public class Movie {
         this.typeOfMedia = typeOfMedia;
         this.haveIWatched = haveIWatched;
     }
+    public String getTitle() {
+        return this.title;
+    }
     
 }

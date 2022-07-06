@@ -12,7 +12,7 @@
         - sort()
         - edit() should be able to edit/update all attributes
         - save() saves to a file that can be read later
-        - ? (calls menu)
+        - help (calls menu)
         - quit
         - print all
         - print a selection (for moviepicker app or others)
@@ -20,6 +20,8 @@
         - random (incorporates the moviepicker functionality)
 
 -- Look at possibly using Media superclass and having Movie and Book subclasses?
+-- Hashcode with movie title key
+    - .lowerCase() the titles
 
 -- Movie class
     //- Title
@@ -28,8 +30,6 @@
     //- Do I own
     //- Physical or digital media
     //- Have I watched
-    - Hashcode with movie title key
-        - .lowerCase() the titles
     - What streaming service
     - How long on the streaming service
 
