@@ -77,7 +77,7 @@ public class UserInterface {
         
         Movie tempMovie = new Movie(title);
         this.movies.add(tempMovie);
-        System.out.println("Movie added!");
+        System.out.println("\nMovie added!\n");
     }
     
     public void printAll() {
