@@ -15,8 +15,11 @@
         - ? (calls menu)
         - quit
         - print all
-        - print a selection (for movie picker app or others)
+        - print a selection (for moviepicker app or others)
         - last watch (updates last time I watched it)
+        - random (incorporates the moviepicker functionality)
+
+-- Look at possibly using Media superclass and having Movie and Book subclasses?
 
 -- Movie class
     //- Title
@@ -25,7 +28,9 @@
     //- Do I own
     //- Physical or digital media
     //- Have I watched
-
-
+    - Hashcode with movie title key
+        - .lowerCase() the titles
+    - What streaming service
+    - How long on the streaming service
 
 - Functionality
