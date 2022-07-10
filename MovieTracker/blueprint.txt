@@ -9,6 +9,8 @@
     //- start() method
         //- Ask if file/for filename
         //- call loadFile() or call menu()
+    - loadfile()
+        - load filename from start()
     - add()
         - Ask user for following
             - Title
