@@ -66,9 +66,8 @@ public class UserInterface {
         }
     }
     
-    public void help() {
-        System.out.println("\nThe available commands are:");
-        System.out.println("\nquit\nhelp\nadd\nprint\n");
+    public void save() {
+        //fill in later
     }
     
     public void add() {
@@ -80,10 +79,43 @@ public class UserInterface {
         System.out.println("\nMovie added!\n");
     }
     
+    public void remove() {
+        //fill in later
+    }
+    
+    public void sort() {
+        //fill in later
+    }
+    
+    public void edit() {
+        //fill in later
+    }
+    
+    public void help() {
+        System.out.println("\nThe available commands are:");
+        System.out.println("\nquit\nhelp\nadd\nprint\n");
+    }
+    
     public void printAll() {
         for (Movie movie : movies) {
             System.out.println(movie.getTitle());
         }
+    }
+    
+    public void printSelection() {
+        //fill later
+    }
+    
+    public void lastWatch() {
+        //fill later
+    }
+    
+    public void random() {
+        //fill later
+    }
+    
+    public void quit() {
+        //fill later
     }
     
 }

@@ -6,6 +6,8 @@ public class Movie {
     private boolean doIOwn;
     private String typeOfMedia;
     private boolean haveIWatched;
+    //private String whatStreamingService; saving for later use
+    //private Date? whenLeavingStreamingService; figure out a good way to save a date, maybe just a string?
     
     public Movie(String title) {
         this.title = title;
@@ -15,6 +17,7 @@ public class Movie {
         this.typeOfMedia = "unk";
         this.haveIWatched = false;
     }
+    
     public Movie(String title, String director) {
         this.title = title;
         this.director = director;
@@ -23,6 +26,7 @@ public class Movie {
         this.typeOfMedia = "unk";
         this.haveIWatched = false;
     }
+    
     public Movie(String title, String director, int yearReleased) {
         this.title = title;
         this.director = director;
@@ -31,6 +35,7 @@ public class Movie {
         this.typeOfMedia = "unk";
         this.haveIWatched = false;
     }
+    
     public Movie(String title, String director, int yearReleased, boolean doIOwn, 
             String typeOfMedia, boolean haveIWatched) {
         this.title = title;
@@ -40,8 +45,29 @@ public class Movie {
         this.typeOfMedia = typeOfMedia;
         this.haveIWatched = haveIWatched;
     }
+    
     public String getTitle() {
         return this.title;
+    }
+    
+    public String getDirector(String title) {
+        return "null";
+    }
+    
+    public int getYear(String title) {
+        return 0;
+    }
+    
+    public boolean getDoIOwn(String title) {
+        return false;
+    }
+    
+    public String getTypeOfMedia(String title) {
+        return "null";
+    }
+    
+    public boolean getHaveIWatched(String title) {
+        return false;
     }
     
 }
