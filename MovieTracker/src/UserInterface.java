@@ -55,14 +55,32 @@ public class UserInterface {
 
     public void menu() {
         while (true) {
-            System.out.println("What would you like to do? (\"help\" prints menu options):");
+            //Menu commands are:
+            //quit
+            //save
+            //add
+            //remove
+            //sort
+            //edit
+            //help
+            //print all
+            //print selection
+            //last watch
+            //random
+            System.out.println("What would you like to do? (\"?\" prints menu options):");
             String command = scanner.nextLine();
 
             if (command.equals("quit")) break;
-            if (command.equals("help")) help();
+            //if (command.equals("save") save();
             if (command.equals("add")) add();
+            //if (command.equals("remove") remove();
+            //if (command.equals("sort") sort();
+            //if (command.equals("edit") edit();
+            if (command.equals("?")) printMenuOptions();
             if (command.equals("print")) printAll();
-
+            //if (command.equals("selection") printSelection();
+            //if (command.equals("last watch") updateLastWatch();
+            //if (command.equals("random") getRandom();
         }
     }
 
@@ -91,14 +109,14 @@ public class UserInterface {
         //fill in later
     }
 
-    public void help() {
+    public void printMenuOptions() {
         System.out.println("\nThe available commands are:");
         System.out.println("\nquit\nhelp\nadd\nprint\n");
     }
 
     public void printAll() {
         for (Movie movie : movies) {
-            System.out.println(movie.getTitle());
+            System.out.println(movie);
         }
     }
 
@@ -106,16 +124,11 @@ public class UserInterface {
         //fill later
     }
 
-    public void lastWatch() {
+    public void updateLastWatch() {
         //fill later
     }
 
-    public void random() {
+    public void getRandom() {
         //fill later
     }
-
-    public void quit() {
-        //fill later
-    }
-
 }

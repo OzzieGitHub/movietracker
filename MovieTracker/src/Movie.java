@@ -6,6 +6,7 @@ public class Movie {
     private boolean doIOwn;
     private String typeOfMedia;
     private boolean haveIWatched;
+    //private Date? dateOfLastWatch; saving for later use
     //private String whatStreamingService; saving for later use
     //private Date? whenLeavingStreamingService; figure out a good way to save a date, maybe just a string?
 
@@ -68,6 +69,12 @@ public class Movie {
 
     public boolean getHaveIWatched(String title) {
         return false;
+    }
+
+    @Override
+    public String toString() {
+        return this.title + " " + this.director + " " + this.yearReleased + " "
+                + this.doIOwn + " " + this.typeOfMedia + " " + this.haveIWatched;
     }
 
 }
