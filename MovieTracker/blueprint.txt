@@ -37,11 +37,9 @@
                                 - Make the change
                     - help
                         - calls the menu options
-                    - quit
-                        - closes program without saving
                     - print all
                         use a for loop to print all the movies  and their details in whatever order the list is already in
-                    - print a selection (for moviepicker app or others)
+                    - print selection (for moviepicker app or others)
                         - put a pin in this one...not really a print, more a selection
                     - last watch
                         - Ask user for title
@@ -49,6 +47,8 @@
                             - Lets user update last watch date of movie
                     - random (incorporates the moviepicker functionality)
                         - Will chose random titles from whatever selection is retrieved from print a selection, or from all movies
+                    - quit
+                        - closes program without saving
 
 -- Look at possibly using Media superclass and having Movie and Book subclasses?
     - Look at this for 2.0
