@@ -1,0 +1,70 @@
+- Class info
+-- Main class
+    //- Create Scanner (pass to UI)
+    //- Call UI class start()
+
+-- User UI class
+    //- Receive Scanner
+    //- Create movie class arraylist
+    //- start() method
+        //- Ask if file/for filename
+        //- call loadFile() or call menu()
+            //- loadfile()
+                //- load filename from start()
+            - menu()
+                - Asks user what they want to do
+                    - save() saves to a file that can be read later
+                        - start with txt file and CSV
+                            - Move to a SQL file in 2.0
+                    - add()
+                        - Ask user for following
+                            - Title
+                            - Director
+                            - Year released
+                            - Do I own
+                            - Physical or digital media
+                            - Have I watched
+                    - remove()
+                        - Ask for title from user
+                            - Search for title and remove from arraylist
+                    - sort()
+                        - Allow user to sort alphabetically by title
+                            - Possibly sort by other fields (2.0 update)
+                    - edit() should be able to edit/update all attributes
+                        - Ask user for title
+                            - Ask user for what field to modify
+                            - Ask user for the modification
+                                - Make the change
+                    - help
+                        - calls the menu options
+                    - print all
+                        use a for loop to print all the movies  and their details in whatever order the list is already in
+                    - print selection (for moviepicker app or others)
+                        - put a pin in this one...not really a print, more a selection
+                    - last watch
+                        - Ask user for title
+                        - Ask user for date
+                            - Lets user update last watch date of movie
+                    - random (incorporates the moviepicker functionality)
+                        - Will chose random titles from whatever selection is retrieved from print a selection, or from all movies
+                    - quit
+                        - closes program without saving
+
+-- Look at possibly using Media superclass and having Movie and Book subclasses?
+    - Look at this for 2.0
+
+-- Hashcode with movie title key
+    - .lowerCase() the titles
+
+-- Movie class
+    //- Title
+    //- Director
+    //- Year released
+    //- Do I own
+    //- Physical or digital media
+    //- Have I watched
+    - What streaming service
+    - How long on the streaming service
+
+- Functionality
+    - For now leave functionality but in a future release move functionality to menuFunctions class
