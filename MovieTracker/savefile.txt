@@ -1,1 +1,3 @@
-test1,dir1,1999,false,digital,false
+test1,dir1,1999,false,physical,false
+test3,dir3,1975,true,physical,true
+test4,dir4,1989,true,digital,true

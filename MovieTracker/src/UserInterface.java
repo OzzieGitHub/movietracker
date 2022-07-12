@@ -71,20 +71,29 @@ public class UserInterface {
             //print selection
             //last watch
             //random
-            System.out.println("What would you like to do? (\"?\" prints menu options):");
+            System.out.println("\nWhat would you like to do? (\"?\" prints menu options):");
             String command = scanner.nextLine();
 
-            if (command.equals("quit")) break;
+            if (command.equals("quit")) {
+                System.out.println("Would you like to save first? (y/n)");
+                String quitSave = scanner.nextLine();
+                if (quitSave.equalsIgnoreCase("n") || quitSave.equalsIgnoreCase("no")) {
+                    break;
+                } else {
+                    save();
+                    break;
+                }
+            }
             if (command.equals("save")) save();
             if (command.equals("add")) add();
-            //if (command.equals("remove") remove();
-            //if (command.equals("sort") sort();
-            //if (command.equals("edit") edit();
+            if (command.equals("remove")) remove();
+            //if (command.equals("sort")) sort();
+            //if (command.equals("edit")) edit();
             if (command.equals("?")) printMenuOptions();
             if (command.equals("print")) printAll();
-            //if (command.equals("selection") printSelection();
-            //if (command.equals("last watch") updateLastWatch();
-            //if (command.equals("random") getRandom();
+            //if (command.equals("selection")) printSelection();
+            //if (command.equals("last watch")) updateLastWatch();
+            //if (command.equals("random")) getRandom();
         }
     }
 
@@ -135,7 +144,11 @@ public class UserInterface {
     }
 
     public void remove() {
-        //fill in later
+        System.out.println("What movie would you like to remove?");
+        String movieTitle = scanner.nextLine();
+        for (Movie movie : movies) {
+            if (movie.getTitle().equals(movieTitle)) movies.remove(movie);
+        }
     }
 
     public void sort() {
@@ -148,7 +161,7 @@ public class UserInterface {
 
     public void printMenuOptions() {
         System.out.println("\nThe available commands are:");
-        System.out.println("\nquit\nhelp\nadd\nprint\n");
+        System.out.println("\nquit\nsave\nadd\n?\nprint\n");
     }
 
     public void printAll() {

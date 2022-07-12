@@ -73,8 +73,8 @@ public class Movie {
 
     @Override
     public String toString() {
-        return this.title + " " + this.director + " " + this.yearReleased + " "
-                + this.doIOwn + " " + this.typeOfMedia + " " + this.haveIWatched;
+        return "Title: " + this.title + ", Director: " + this.director + ", Year Released: " + this.yearReleased
+                + ", Do I Own?: " + this.doIOwn + ", Type of Media: " + this.typeOfMedia + ", Previously Watched?: " + this.haveIWatched;
     }
 
 }
