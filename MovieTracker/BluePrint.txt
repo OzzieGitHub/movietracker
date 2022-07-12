@@ -12,7 +12,7 @@
             //- loadfile()
                 //- load filename from start()
             - menu()
-                - Asks user what they want to do
+                //- Asks user what they want to do
                     - save() saves to a file that can be read later
                         - start with txt file and CSV
                             - Move to a SQL file in 2.0
@@ -35,10 +35,11 @@
                             - Ask user for what field to modify
                             - Ask user for the modification
                                 - Make the change
-                    - help
+                    //- ?
                         - calls the menu options
                     - print all
-                        use a for loop to print all the movies  and their details in whatever order the list is already in
+                        - use a for loop to print all the movies  and their details in whatever order the list is already in
+                        - Need to format this better
                     - print selection (for moviepicker app or others)
                         - put a pin in this one...not really a print, more a selection
                     - last watch
@@ -47,8 +48,8 @@
                             - Lets user update last watch date of movie
                     - random (incorporates the moviepicker functionality)
                         - Will chose random titles from whatever selection is retrieved from print a selection, or from all movies
-                    - quit
-                        - closes program without saving
+                    //- quit
+                        //- closes program without saving
 
 -- Look at possibly using Media superclass and having Movie and Book subclasses?
     - Look at this for 2.0
