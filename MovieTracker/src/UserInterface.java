@@ -1,6 +1,10 @@
+import java.io.FileWriter;
+import java.io.IOException;
+import java.nio.file.Path;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.nio.file.Paths;
+
 
 public class UserInterface {
     private Scanner scanner;
@@ -71,7 +75,7 @@ public class UserInterface {
             String command = scanner.nextLine();
 
             if (command.equals("quit")) break;
-            //if (command.equals("save") save();
+            if (command.equals("save")) save();
             if (command.equals("add")) add();
             //if (command.equals("remove") remove();
             //if (command.equals("sort") sort();
@@ -84,10 +88,22 @@ public class UserInterface {
         }
     }
 
+    //Seems to be working with set save file name. Want to add user ability to change save file name.
     public void save() {
-        //fill in later
+        Path filePath = Path.of("savefile.txt");
+
+        try(FileWriter fileWriter = new FileWriter(filePath.toFile())){
+            for (Movie movie : movies) {
+                fileWriter.write(String.valueOf(movie) + "\n");
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        System.out.println("File saved!");
     }
 
+    //Still needs work to be 100% completed but should be good for testing purposes
     public void add() {
                 //- Title
                 //- Director
@@ -97,7 +113,7 @@ public class UserInterface {
                 //- Have I watched
         System.out.println("\nWhat is the title of the movie?");
         String title = scanner.nextLine();
-        System.out.println("\nWhat is the name of the director? (Enter to leave blank");
+        System.out.println("\nWhat is the name of the director? (Enter to leave blank)");
         String director = scanner.nextLine();
         System.out.println("\nWhat year was the film released? (Enter to leave blank");
         int yearReleased = Integer.valueOf(scanner.nextLine());
