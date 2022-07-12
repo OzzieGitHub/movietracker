@@ -51,24 +51,24 @@ public class Movie {
         return this.title;
     }
 
-    public String getDirector(String title) {
-        return "null";
+    public String getDirector() {
+        return this.director;
     }
 
-    public int getYear(String title) {
-        return 0;
+    public int getYear() {
+        return this.yearReleased;
     }
 
-    public boolean getDoIOwn(String title) {
-        return false;
+    public boolean getDoIOwn() {
+        return this.doIOwn;
     }
 
-    public String getTypeOfMedia(String title) {
-        return "null";
+    public String getTypeOfMedia() {
+        return this.typeOfMedia;
     }
 
-    public boolean getHaveIWatched(String title) {
-        return false;
+    public boolean getHaveIWatched() {
+        return this.haveIWatched;
     }
 
     @Override

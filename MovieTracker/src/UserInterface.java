@@ -94,7 +94,10 @@ public class UserInterface {
 
         try(FileWriter fileWriter = new FileWriter(filePath.toFile())){
             for (Movie movie : movies) {
-                fileWriter.write(String.valueOf(movie) + "\n");
+                String movieSaveLine = movie.getTitle() + "," + movie.getDirector() + ","
+                        + movie.getYear() + "," + movie.getDoIOwn() + "," + movie.getTypeOfMedia()
+                        + "," + movie.getHaveIWatched();
+                fileWriter.write(String.valueOf(movieSaveLine) + "\n");
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
