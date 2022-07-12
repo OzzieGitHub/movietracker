@@ -89,10 +89,28 @@ public class UserInterface {
     }
 
     public void add() {
+                //- Title
+                //- Director
+                //- Year released
+                //- Do I own
+                //- Physical or digital media
+                //- Have I watched
         System.out.println("\nWhat is the title of the movie?");
         String title = scanner.nextLine();
+        System.out.println("\nWhat is the name of the director? (Enter to leave blank");
+        String director = scanner.nextLine();
+        System.out.println("\nWhat year was the film released? (Enter to leave blank");
+        int yearReleased = Integer.valueOf(scanner.nextLine());
+        System.out.println("\nDo you own the film (y/n)? (Enter to leave blank)");
+        String ownAnswer = scanner.nextLine();
+        boolean doIOwn = (ownAnswer.equalsIgnoreCase("y") || ownAnswer.equalsIgnoreCase("yes"));
+        System.out.println("\nIs this film on physical or digital media? (Enter to leave blank)");
+        String physicalOrDigital = scanner.nextLine();
+        System.out.println("\nHave you already watched this film?");
+        String watchedAnswer = scanner.nextLine();
+        boolean haveIWatched = (watchedAnswer.equalsIgnoreCase("y") || watchedAnswer.equalsIgnoreCase("yes"));
 
-        Movie tempMovie = new Movie(title);
+        Movie tempMovie = new Movie(title, director,yearReleased, doIOwn, physicalOrDigital, haveIWatched);
         this.movies.add(tempMovie);
         System.out.println("\nMovie added!\n");
     }
