@@ -1,20 +1,23 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Path;
-import java.util.Scanner;
-import java.util.ArrayList;
 import java.nio.file.Paths;
-
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+import java.util.Scanner;
 
 public class UserInterface {
     private Scanner scanner;
     private ArrayList<Movie> movies;
 
+    //Done
     public UserInterface(Scanner scanner) {
         this.scanner = scanner;
         this.movies = new ArrayList<>();
     }
 
+    //Done
     public void start() {
         System.out.println("Do you have a saved file? (y/n)");
         String input = scanner.nextLine();
@@ -27,8 +30,9 @@ public class UserInterface {
         if (input.equals("n")) menu();
     }
 
+    //Done
     public void loadFile(String fileName) {
-        //The movie parts in order are:
+        //The current movie parts in order are:
         //String title;
         //String director;
         //int yearReleased;
@@ -66,7 +70,7 @@ public class UserInterface {
             //remove
             //sort
             //edit
-            //help
+            //menu options "?"
             //print all
             //print selection
             //last watch
@@ -93,7 +97,7 @@ public class UserInterface {
             if (command.equals("print")) printAll();
             //if (command.equals("selection")) printSelection();
             //if (command.equals("last watch")) updateLastWatch();
-            //if (command.equals("random")) getRandom();
+            if (command.equals("random")) getRandom();
         }
     }
 
@@ -115,7 +119,7 @@ public class UserInterface {
         System.out.println("File saved!");
     }
 
-    //Still needs work to be 100% completed but should be good for testing purposes
+    //Still needs work to be fully functional but should be good for testing purposes
     public void add() {
                 //- Title
                 //- Director
@@ -143,6 +147,7 @@ public class UserInterface {
         System.out.println("\nMovie added!\n");
     }
 
+    //Done
     public void remove() {
         System.out.println("What movie would you like to remove?");
         String movieTitle = scanner.nextLine();
@@ -161,7 +166,7 @@ public class UserInterface {
 
     public void printMenuOptions() {
         System.out.println("\nThe available commands are:");
-        System.out.println("\nquit\nsave\nadd\n?\nprint\n");
+        System.out.println("\nquit\nsave\nadd\n?\nprint\nrandom");
     }
 
     public void printAll() {
@@ -178,7 +183,15 @@ public class UserInterface {
         //fill later
     }
 
+    //Done
     public void getRandom() {
-        //fill later
+        ArrayList<Movie> tempArray = this.movies;
+        Collections.shuffle(tempArray);
+        Random rand = new Random();
+        int random = rand.nextInt(tempArray.size());
+        System.out.println("The movie picked is: " + tempArray.get(random).getTitle());
     }
 }
+
+//commit getrandom()
+//commit updated blueprint
